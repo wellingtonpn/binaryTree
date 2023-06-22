@@ -14,10 +14,20 @@ public class Main {
         tree.toAdd(13);
         tree.toAdd(20);
 
-        System.out.println("\n\nEm-ordem");
+        System.out.println("\n\nIn Order");
         tree.inOrder(tree.getSource());
 
+        System.out.println("\n\nPre Order");
+        tree.preOrder(tree.getSource());
 
+        System.out.println("\n\nPost Order");
+        tree.postOrder(tree.getSource());
+
+        System.out.println("\n\nREMOVENDO");
+        tree.remove(5);
+
+        System.out.println("\n\nIn Order");
+        tree.inOrder(tree.getSource());
 
     }
 }
