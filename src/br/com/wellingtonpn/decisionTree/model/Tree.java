@@ -47,4 +47,29 @@ public class Tree<TYPE extends Comparable>{
         }
 
     }
+
+    public void inOrder(Node<TYPE> actual)
+    {
+        if(actual != null)
+        {
+            this.inOrder(actual.getLeft());
+            System.out.println("node: " + actual.getValue());
+            this.inOrder(actual.getRight());
+        }
+
+    }
+
+    public void preOrder(Node<TYPE> actual)
+    {
+        if(actual != null)
+        {
+            System.out.println("node: " + actual.getValue());
+            this.preOrder(actual.getRight());
+            this.preOrder(actual.getLeft());
+        }
+    }
+
+    public Node<TYPE> getSource() {
+        return this.source;
+    }
 }
